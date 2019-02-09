@@ -1,6 +1,6 @@
 ## Simple Calculator
 
-Basic utility for evaluating expressions using +/-/\*//
+Basic utility for evaluating expressions using +, -, \*, / operators
 
 ### Why make this?
 
