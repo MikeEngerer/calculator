@@ -40,24 +40,26 @@ operations.displayNums = function() {
 // 	this.
 // }
 operations.hasInput = function() {
-	if (!this.numOne || !this.numTwo) {
-		alert("Must provide two numbers")
+	if (this.numOne && this.numTwo) {
 		return true;
+	} else {
+		alert("Must provide two numbers")
+		return false;
 	}
 }
 
 operations.hasOp = function() {
-	if (!this.currentOp) {
+	if (this.currentOp) {
 		return true;
+	} else {
+		alert("Must provide operator")
+		return false
 	}
-	return false
 }
 operations.evaluate = function() {
 	if (this.hasInput() && this.hasOp()) {
+		document.getElementById('output').innerHTML = this[this.currentOp]();
 		return
 	}
-	let output = document.getElementById('output')
-	output.innerHTML = this[this.currentOp]();
-	this.numOne = this[this.currentOp]();
 }
 
