@@ -40,7 +40,6 @@ operations.displayNums = function() {
 	let two = document.getElementById('current-two')
 	one.innerHTML = this.numOne;
 	two.innerHTML = this.numTwo;
-
 }
 // operations.clearNums = function() {
 // 	this.
