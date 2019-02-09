@@ -2,7 +2,7 @@
 
 Basic utility for evaluating expressions using +, -, \*, / operators
 
-** currently only supports single digit operations (lol)
+\* currently supports single digit operations only (lol) \*
 
 ### Why make this?
 
