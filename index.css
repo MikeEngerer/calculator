@@ -5,4 +5,18 @@ html {
 .numbers {
 	display: flex;
 	justify-content: space-around;
+	width: 33%;
+}
+
+.operators {
+	display: flex;
+	justify-content: space-around;
+	width: 33%;
+}
+
+
+.current-ops {
+	display: flex;
+	justify-content: space-around;
+	width: 33%;
 }
