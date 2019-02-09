@@ -2,6 +2,8 @@
 
 Basic utility for evaluating expressions using +, -, \*, / operators
 
+** currently only supports single digit operations (lol)
+
 ### Why make this?
 
 Following an abominable tech challenge performance involving the creation of a simple note taking app, I discovered I need lots of practice with basic front end development. 
