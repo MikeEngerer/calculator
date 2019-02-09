@@ -23,9 +23,7 @@ operations.changeOp = function(type) {
 }
 
 operations.changeNum = function(num) {
-	if (this.numTwo) {
-		this.clear()
-	} 
+	if (this.numTwo) { this.clear() } 
 	!this.numOne ? this.numOne = parseInt(num) : this.numTwo = parseInt(num)
 	this.displayNums()
 }
