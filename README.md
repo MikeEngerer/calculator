@@ -10,5 +10,5 @@ Limited myself to HTML, CSS, and vanilla JS for the creation of this app.
 
 ### How to run:
 
--clone
--open index.html
+1. clone 
+2. ```xdg-open index.html```
