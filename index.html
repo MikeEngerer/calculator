@@ -2,29 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calculator</title>
 	<link rel="stylesheet" type="text/css" href="./index.css">
+	<title>Simple Calculator</title>
 </head>
 <body>
+	<header class="header">
+		<h1>Simple Calculator</h1>
+	</header>
+	<br>
 	<main>
 		<div class="numbers">
-			<input type="button" onclick="operations.changeNum(this.value)" value='0'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='1'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='2'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='3'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='4'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='5'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='6'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='7'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='8'></input>
-			<input type="button" onclick="operations.changeNum(this.value)" value='9'></input>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='0'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='1'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='2'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='3'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='4'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='5'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='6'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='7'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='8'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='9'>
 		</div>	
 		<br>
 		<div class="operators">
-			<input type="button" onclick="operations.changeOp(this.value)" value='add'></input>
-			<input type="button" onclick="operations.changeOp(this.value)" value='subtract'></input>
-			<input type="button" onclick="operations.changeOp(this.value)" value='multiply'></input>
-			<input type="button" onclick="operations.changeOp(this.value)" value='divide'></input>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='add'>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='subtract'>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='multiply'>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='divide'>
 		</div>
 		<br>
 		<div class="current-ops">
@@ -35,8 +39,10 @@
 			<h3 id="output"></h3>
 		</div>
 		<div class="actions">
-			<input type="button" value="evaluate" onclick="operations.evaluate()">
-			<input type="button" value="clear" onclick="operations.clear()">
+			<input class="button" type="button" value="clear" onclick="operations.clear()">	
+			<form method="post" action="/">
+				<button class="button" type="submit" onclick="operations.evaluate()">Evaluate</button>
+			</form>
 		</div>		
 	</main>
 	<script type="text/javascript" src="./index.js"></script>
