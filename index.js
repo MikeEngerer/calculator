@@ -32,34 +32,33 @@ operations.displayNums = function() {
 	document.getElementById('current-one').innerHTML = this.numOne;
 	if (this.numTwo) {
 		document.getElementById('current-two').innerHTML = this.numTwo;
-		document.getElementById('equals').innerHTML = '='
-		this.evaluate()
-	}
-}
-// operations.clearNums = function() {
-// 	this.
-// }
-operations.hasInput = function() {
-	if (this.numOne && this.numTwo) {
-		return true;
-	} else {
-		alert("Must provide two numbers")
-		return false;
 	}
 }
 
+operations.hasInput = function() {
+	return this.hasOwnProperty('numOne') && this.hasOwnProperty('numTwo')
+}
+
 operations.hasOp = function() {
-	if (this.currentOp) {
-		return true;
-	} else {
-		alert("Must provide operator")
-		return false
-	}
+	return this.hasOwnProperty('currentOp')
 }
 operations.evaluate = function() {
-	if (this.hasInput() && this.hasOp()) {
+	if (this.hasInput() && this.hasOp()) {		
+		document.getElementById('equals').innerHTML = '='
 		document.getElementById('output').innerHTML = this[this.currentOp]();
-		return
+	} else {
+		alert('Must provide nums and op')
 	}
 }
+
+operations.clear = function() {
+	document.getElementById('current-two').innerHTML = null;
+	document.getElementById('current-one').innerHTML = null;
+	document.getElementById('current-op').innerHTML = null;
+	document.getElementById('equals').innerHTML = null;
+	document.getElementById('output').innerHTML = null;
+	this.numOne = null;
+	this.numTwo = null;
+	this.currentOp = null;
+}	
 
