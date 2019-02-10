@@ -43,7 +43,6 @@ operations.changeOp = function(type) {
 
 operations.changeNum = function(num) {
 	this.currentNum === 'numOne' ? this.numOne.push(num) : this.numTwo.push(num)
-
 	this.displayNums()
 }
 
@@ -52,9 +51,10 @@ operations.nextNum = function() {
 }
 
 operations.displayNums = function() {
-	document.getElementById('current-one').innerHTML = parseInt((this.numOne).join(''));
+	let nums = this.parseNumArray()
+	document.getElementById('current-one').innerHTML = nums[0];
 	if (this.numTwo.length > 0) {
-		document.getElementById('current-two').innerHTML = parseInt((this.numTwo).join(''));
+		document.getElementById('current-two').innerHTML = nums[1];
 	}
 }
 
@@ -78,7 +78,6 @@ operations.clear = function() {
 	document.getElementById('current-one').innerHTML = null;
 	document.getElementById('current-op').innerHTML = null;
 	document.getElementById('output').innerHTML = null;
-	document.getElementbyId('trivia').innerHTML = null;
 	this.numOne = [];
 	this.numTwo = [];
 	this.currentOp = null;
@@ -87,7 +86,6 @@ operations.clear = function() {
 operations.parseNumArray = function() {
 	let numOne = parseInt((this.numOne).join(''))
 	let numTwo = parseInt((this.numTwo).join(''))
-	console.log(numOne, numTwo)
 	return [numOne, numTwo]
 }
 

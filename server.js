@@ -19,6 +19,8 @@ app.post('/', (req, res) => {
 		let templateVars = {data: resp.data, answer: req.body.answer}
 		res.render('pages/index', templateVars)
 	})
+
+	// UNCOMMENT WHILE OFFLINE
 	// let templateVars = {data: null, answer: req.body.answer}
 	// res.render('pages/index', templateVars)
 
