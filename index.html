@@ -40,11 +40,12 @@
 		</div>
 		<div class="actions">
 			<input class="button" type="button" value="clear" onclick="operations.clear()">	
-			<form method="post" action="/">
+			<form name="evaluate" method="post" action="/">
+				<input id="answer" type="hidden" name="answer">
 				<button class="button" type="submit" onclick="operations.evaluate()">Evaluate</button>
 			</form>
 		</div>		
 	</main>
-	<script type="text/javascript" src="./index.js"></script>
+<!-- 	<script type="text/javascript" src="./index.js"></script> -->
 </body>
 </html>

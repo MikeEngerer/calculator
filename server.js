@@ -11,10 +11,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-	console.log(req.params)
-	axios.get(`http://numbersapi.com/12`)
-	.then(res => {
-		console.log(res.data)
+	console.log(req.body)
+	axios.get(`http://numbersapi.com/${req.body.answer}`)
+	.then(resp => {
+		res.send(resp.data)
 	})
 })
 

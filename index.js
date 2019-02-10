@@ -44,7 +44,8 @@ operations.hasOp = function() {
 	return this.hasOwnProperty('currentOp')
 }
 operations.evaluate = function() {
-	if (this.hasInput() && this.hasOp()) {		
+	if (this.hasInput() && this.hasOp()) {
+		document.getElementById('answer').value = this[this.currentOp]()		
 		document.getElementById('equals').innerHTML = '='
 		document.getElementById('output').innerHTML = this[this.currentOp]();
 	} else {
