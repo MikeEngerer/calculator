@@ -2,7 +2,7 @@
 
 Basic utility for evaluating expressions using +, -, \*, / operators
 
-Fetches trivia from [numbers api](www.numbersapi.com) and displays on eval 
+Fetches trivia from [numbers api](http://www.numbersapi.com) and displays on eval 
 
 \* currently supports single digit operations only (lol) \*
 
