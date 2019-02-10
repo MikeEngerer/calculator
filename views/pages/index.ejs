@@ -3,6 +3,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 	<title>Simple Calculator</title>
 </head>
 <body>
@@ -14,30 +15,34 @@
 		<div class="calc-header">
 			<div class="output">
 				<h3 id="current-one"></h3>
+				&nbsp;
 				<h3 id="current-op"></h3>
+				&nbsp;
 				<h3 id="current-two"></h3>
+				&nbsp;
 				<% include ../partials/_answer %>	
 			</div>
 		</div>
 		<div class="calc-body">
 			<div class="numbers">
 				<div class="btn-num-seven-nine">	
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='7'>
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='8'>
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='9'>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='7'>7</button>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='8'>8</button>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='9'>9</button>
 				</div>
 				<div class="btn-num-four-six">
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='4'>
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='5'>
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='6'>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='4'>4</button>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='5'>5</button>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='6'>6</button>
 				</div>
 				<div class="btn-num-one-three">
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='1'>
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='2'>
-					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='3'>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='1'>1</button>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='2'>2</button>
+					<button class="btn btn-num" onclick="operations.changeNum(this.value)" value='3'>3</button>
 				</div>
 				<div class="btn-num-zero-equals">	
-					<input class="btn btn-num btn-num-zero" type="button" onclick="operations.changeNum(this.value)" value='0'>
+					<button class="btn btn-num btn-num-zero" onclick="operations.changeNum(this.value)" value='0'>0</button>
+					<button class="btn btn-num btn-clear" value="clear" onclick="operations.clear()">C</button>	
 					<form name="evaluate" method="post" action="/">
 						<input id="answer" type="hidden" name="answer">
 						<button class="btn btn-op btn-equals" type="submit" onclick="operations.evaluate()">=</button>
@@ -46,27 +51,18 @@
 			</div>
 			<div class="operators">
 				<div>
-					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='add'>
+					<button class="btn btn-op" onclick="operations.changeOp(this.value)" value='add'>+</button>
 				</div>
 				<div>
-					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='subtract'>
+					<button class="btn btn-op" onclick="operations.changeOp(this.value)" value='subtract'>-</button>
 				</div>
 				<div>
-					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='multiply'>	
+					<button class="btn btn-op" onclick="operations.changeOp(this.value)" value='multiply'>*</button>
 				</div>
 				<div>
-					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='divide'>
+					<button class="btn btn-op" onclick="operations.changeOp(this.value)" value='divide'>/</button>
 				</div>
 			</div>	
-		</div>
-		<br>
-		<br>
-		<div class="actions">
-			<input class="button" type="button" value="clear" onclick="operations.clear()">	
-			<form name="evaluate" method="post" action="/">
-				<input id="answer" type="hidden" name="answer">
-				<button class="btn btn-equals" type="submit" onclick="operations.evaluate()">evaluate</button>
-			</form>
 		</div>
 		<div>
 			<% include ../partials/_trivia %>

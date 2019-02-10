@@ -1,9 +1,11 @@
 html {
-
+	font-family: 'Roboto', sans-serif;
 }
 
 .header {
 	text-align: center;
+	text-decoration: underline;
+	color: blue;
 }
 
 .calc-header {
@@ -13,6 +15,18 @@ html {
 .output {
 	display: flex;
 	justify-content: center;
+	font-size: 24px;
+	font-weight: 800;
+	color: blue;
+}
+
+#output {
+	color: orange;
+}
+
+#trivia {
+	text-align: center;
+	color: blue;
 }
 .calc-body {
 	display: flex;
@@ -29,7 +43,6 @@ html {
 }
 
 .btn {
-	font-weight: 600;
 	font-size: 24px;
 	text-align: center;
 	border: none;
@@ -37,6 +50,37 @@ html {
 	padding: 30px 40px;
 	margin-bottom: 4px;
 }
+
+.btn-num:hover {
+	color: orange;
+	font-weight: 900;
+	font-size: 24px;
+	text-align: center;
+	border: none;
+	padding: 30px 40px;
+	margin-bottom: 4px;
+}
+
+.btn-op:hover {
+	color: blue;
+	font-weight: 900;
+	font-size: 24px;
+	text-align: center;
+	border: none;
+	padding: 30px 40px;
+	margin-bottom: 4px;
+}
+
+.btn-clear:hover {
+	color: blue;
+	font-weight: 900;
+	font-size: 24px;
+	text-align: center;
+	border: none;
+	padding: 30px 40px;
+	margin-bottom: 4px;
+}
+
 .btn-num {
 	width: 93px;
 	background-color: darkblue;
@@ -46,23 +90,30 @@ html {
 .btn-op {
 	margin-left: 4px;
 	background-color: orange;
-	width: 120px
+	width: 93px;
 
 }
 
 .btn-num-zero {
-	width: 190px;
+	width: 93px;
+}
+
+.btn-clear {
+	background-color: darkorange;
+	margin-left:0px;
 }
 
 .btn-equals {
+	background-color: darkorange;
 	margin-left:0px;
-	background-color: orange;
-	width: 93px;
+
 }
 
 form {
 	display: inline;
 }
+
+
 
 
 

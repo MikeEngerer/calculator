@@ -1,6 +1,13 @@
 
 const operations = {};
 
+const conversions = {
+	add: '+',
+	subtract: '-',
+	multiply: '*',
+	divide: '/'
+}
+
 operations.add = function() {
 	return this.numOne + this.numTwo;
 }
@@ -20,7 +27,7 @@ operations.multiply = function() {
 
 operations.changeOp = function(type) {
 	this.currentOp = type
-	document.getElementById('current-op').innerHTML = this.currentOp
+	document.getElementById('current-op').innerHTML = conversions[this.currentOp]
 }
 
 operations.changeNum = function(num) {
