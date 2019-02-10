@@ -20,6 +20,10 @@ html {
 	color: blue;
 }
 
+#current-op {
+	color: orange;
+}
+
 #output {
 	color: orange;
 }
