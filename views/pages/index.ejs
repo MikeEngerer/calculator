@@ -2,46 +2,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 	<title>Simple Calculator</title>
 </head>
 <body>
 	<header class="header">
-		<h1>Simple Calculator</h1>
+		<h1>Calculator</h1>
 	</header>
 	<br>
 	<main>
-		<div class="numbers">
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='0'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='1'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='2'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='3'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='4'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='5'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='6'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='7'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='8'>
-			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='9'>
-		</div>	
-		<br>
-		<div class="operators">
-			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='add'>
-			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='subtract'>
-			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='multiply'>
-			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='divide'>
+		<div class="calc-header">
+			<div class="output">
+				<h3 id="current-one"></h3>
+				<h3 id="current-op"></h3>
+				<h3 id="current-two"></h3>
+				<% include ../partials/_answer %>	
+			</div>
+		</div>
+		<div class="calc-body">
+			<div class="numbers">
+				<div class="btn-num-seven-nine">	
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='7'>
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='8'>
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='9'>
+				</div>
+				<div class="btn-num-four-six">
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='4'>
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='5'>
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='6'>
+				</div>
+				<div class="btn-num-one-three">
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='1'>
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='2'>
+					<input class="btn btn-num" type="button" onclick="operations.changeNum(this.value)" value='3'>
+				</div>
+				<div class="btn-num-zero-equals">	
+					<input class="btn btn-num btn-num-zero" type="button" onclick="operations.changeNum(this.value)" value='0'>
+					<form name="evaluate" method="post" action="/">
+						<input id="answer" type="hidden" name="answer">
+						<button class="btn btn-op btn-equals" type="submit" onclick="operations.evaluate()">=</button>
+					</form>
+				</div>
+			</div>
+			<div class="operators">
+				<div>
+					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='add'>
+				</div>
+				<div>
+					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='subtract'>
+				</div>
+				<div>
+					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='multiply'>	
+				</div>
+				<div>
+					<input class="btn btn-op" type="button" onclick="operations.changeOp(this.value)" value='divide'>
+				</div>
+			</div>	
 		</div>
 		<br>
-		<div class="current-ops">
-			<h3 id="current-one"></h3>
-			<h3 id="current-op"></h3>
-			<h3 id="current-two"></h3>
-			<% include ../partials/_answer %>
-		</div>
+		<br>
 		<div class="actions">
 			<input class="button" type="button" value="clear" onclick="operations.clear()">	
 			<form name="evaluate" method="post" action="/">
 				<input id="answer" type="hidden" name="answer">
-				<button class="button" type="submit" onclick="operations.evaluate()">evaluate</button>
+				<button class="btn btn-equals" type="submit" onclick="operations.evaluate()">evaluate</button>
 			</form>
 		</div>
 		<div>

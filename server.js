@@ -14,13 +14,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-	// axios.get(`http://numbersapi.com/${Math.round(req.body.answer)}`)
-	// .then(resp => {
-	// 	let templateVars = {data: resp.data, answer: req.body.answer}
-	// 	res.render('pages/index', templateVars)
-	// })
-	let templateVars = {data: null, answer: req.body.answer}
-	res.render('pages/index', templateVars)
+	axios.get(`http://numbersapi.com/${Math.round(req.body.answer)}`)
+	.then(resp => {
+		let templateVars = {data: resp.data, answer: req.body.answer}
+		res.render('pages/index', templateVars)
+	})
+	// let templateVars = {data: null, answer: req.body.answer}
+	// res.render('pages/index', templateVars)
 
 })
 
