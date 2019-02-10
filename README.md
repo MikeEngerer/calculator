@@ -2,6 +2,8 @@
 
 Basic utility for evaluating expressions using +, -, \*, / operators
 
+Fetches trivia from numbers api and displays on eval <numbersapi.com>
+
 \* currently supports single digit operations only (lol) \*
 
 ### Why make this?
@@ -10,7 +12,11 @@ Following an abominable tech challenge performance involving the creation of a s
 
 Limited myself to HTML, CSS, and vanilla JS for the creation of this app.
 
+\* following numbers api update, app now served with express to allow for server-side rendering of numbers api response (ejs also used for templating) \*
+
 ### How to run:
 
 1. clone 
-2. ```xdg-open index.html```
+2. ```npm i```
+3. ```npm start```
+4. nav to localhost:8000/
