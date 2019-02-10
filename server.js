@@ -9,11 +9,13 @@ app.use(express.static('./'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-	res.render('pages/index')
+	let templateVars = {data: null}
+	res.render('pages/index', templateVars)
 })
 
 app.post('/', (req, res) => {
-	axios.get(`http://numbersapi.com/${req.body.answer}`)
+	console.log('here')
+	axios.get(`http://numbersapi.com/${Math.floor(req.body.answer)}`)
 	.then(resp => {
 		let templateVars = {data: resp.data, answer: req.body.answer}
 		res.render('pages/index', templateVars)

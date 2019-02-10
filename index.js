@@ -46,8 +46,6 @@ operations.hasOp = function() {
 operations.evaluate = function() {
 	if (this.hasInput() && this.hasOp()) {
 		document.getElementById('answer').value = this[this.currentOp]()		
-		document.getElementById('equals').innerHTML = '='
-		document.getElementById('output').innerHTML = this[this.currentOp]();
 	} else {
 		alert('Must provide nums and op')
 	}
@@ -57,8 +55,8 @@ operations.clear = function() {
 	document.getElementById('current-two').innerHTML = null;
 	document.getElementById('current-one').innerHTML = null;
 	document.getElementById('current-op').innerHTML = null;
-	document.getElementById('equals').innerHTML = null;
 	document.getElementById('output').innerHTML = null;
+	document.getElementbyId('trivia').innerHTML = null;
 	this.numOne = null;
 	this.numTwo = null;
 	this.currentOp = null;

@@ -11,6 +11,7 @@ html {
 .numbers {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	width: 33%;
 }
 
@@ -23,6 +24,7 @@ html {
 
 .current-ops {
 	display: flex;
+	align-items: center;
 	justify-content: space-around;
 	width: 33%;
 }
@@ -42,7 +44,7 @@ html {
 	color: green;
 }
 
-.trivia {
+#trivia {
 	text-decoration: blink;
 	width: 33%;
 }
