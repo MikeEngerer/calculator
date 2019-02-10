@@ -42,5 +42,10 @@ html {
 	color: green;
 }
 
+.trivia {
+	text-decoration: blink;
+	width: 33%;
+}
+
 
 

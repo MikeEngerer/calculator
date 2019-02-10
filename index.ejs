@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<title>Simple Calculator</title>
+</head>
+<body>
+	<header class="header">
+		<h1>Simple Calculator</h1>
+	</header>
+	<br>
+	<main>
+		<div class="numbers">
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='0'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='1'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='2'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='3'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='4'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='5'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='6'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='7'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='8'>
+			<input class="button" type="button" onclick="operations.changeNum(this.value)" value='9'>
+		</div>	
+		<br>
+		<div class="operators">
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='add'>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='subtract'>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='multiply'>
+			<input class="button" type="button" onclick="operations.changeOp(this.value)" value='divide'>
+		</div>
+		<br>
+		<div class="current-ops">
+			<h3 id="current-one"></h3>
+			<h3 id="current-op"></h3>
+			<h3 id="current-two"></h3>
+			<h3 id="equals"></h3>
+			<h3 id="output"></h3>
+		</div>
+		<div class="actions">
+			<input class="button" type="button" value="clear" onclick="operations.clear()">	
+			<form name="evaluate" method="post" action="/">
+				<input id="answer" type="hidden" name="answer">
+				<button class="button" type="submit" onclick="operations.evaluate()">Evaluate</button>
+			</form>
+		</div>
+		<div>
+			<% include ./views/_trivia.ejs %>
+		</div>	
+	</main>
+
+</body>
+</html>

@@ -6,15 +6,17 @@ const axios = require('axios')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('./'));
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-	res.render('./index.html')
+	res.render('pages/index')
 })
 
 app.post('/', (req, res) => {
-	console.log(req.body)
 	axios.get(`http://numbersapi.com/${req.body.answer}`)
 	.then(resp => {
-		res.send(resp.data)
+		let templateVars = {data: resp.data, answer: req.body.answer}
+		res.render('pages/index', templateVars)
 	})
 })
 
