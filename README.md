@@ -16,7 +16,7 @@ Limited myself to HTML, CSS, and vanilla JS for the creation of this app.
 
 ### How to run:
 
-1. clone 
+1. ```git clone``` 
 2. ```npm i```
 3. ```npm start```
-4. nav to localhost:8000/
+4. nav to localhost:8000
