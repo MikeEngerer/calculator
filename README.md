@@ -19,5 +19,5 @@ Limited myself to HTML, CSS, and vanilla JS for the creation of this app. \*
 1. ```git clone``` 
 2. ```npm i```
 3. ```npm start```
-4. Nav to localhost:8080
-5. Have fun!
+4. ```xdg-open http://localhost:8080```
+5. Calculate!
