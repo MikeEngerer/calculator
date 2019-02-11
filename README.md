@@ -12,7 +12,7 @@ Following an abominable tech challenge performance involving the creation of a s
 
 Limited myself to HTML, CSS, and vanilla JS for the creation of this app. \*
 
-\* Implementing number trivia meant adding a minimal back-end (express) + view engine (ejs) for server side rendering \*
+\* Implementing number trivia meant adding a minimal back-end (express) + view engine (ejs) for server side rendering 
 
 ### How to run:
 
