@@ -4,6 +4,8 @@ Basic utility for evaluating expressions using +, -, \*, / operators.
 
 Fetches trivia from [numbers api](http://www.numbersapi.com) and displays on eval. 
 
+Newer version of this project can be found [here](https://github.com/MikeEngerer/calculator-jQuery)
+
 ![calc screenshot](/img/calc.png?raw=true)
 
 ### Why make this?
